@@ -5,6 +5,7 @@ import math
 # Exercises 4.2
 # exercise 1
 def driver():
+        # create two orthogonal vectors (x and y)
 	n = 3
 	x = np.linspace(0, 0, n)
 	x[0] = 1
@@ -15,6 +16,7 @@ def driver():
 	y[1] = 2**(1/2)
 	y[2] = 1
 
+        # find dot product of x and y
 	dp = dotProduct(x,y,n)
 
 	print('the dot product is : ', dp)
