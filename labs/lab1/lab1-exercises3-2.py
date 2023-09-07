@@ -14,8 +14,9 @@ print('the first three entries of x are', x[0:3])
 w = 10**(-np.linspace(1, 10, 10))
 w
 
-x = np.linspace(1, len(w), len(w))
+x = np.linspace(1, len(w), len(w)) #creates a vector of integers from 1 to length of w
 
+# plot x versus w
 plt.plot(x, w) 
 plt.xlabel('x')
 plt.ylabel('w')
