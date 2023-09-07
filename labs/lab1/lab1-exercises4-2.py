@@ -32,6 +32,7 @@ driver()
 
 # exercise 2
 def driver():
+        # test matrixVectorMult with random matrix
 	m = np.array([[4, 2, 3], [1, 6, 2], [4, 4, 4], [2, 8, 1]])
 	v = np.array((2, 1, 3))
 	
@@ -39,11 +40,12 @@ def driver():
 	print('the solution is : ', solution)
 	return 
 
+# matrix vector multiplication function 
 def matrixVectorMult(m, v, n):
 	sol = np.zeros(len(m))
 
 	for i in range(len(m)):
-		sol[i] = dotProduct(m[i], v, n) 
+		sol[i] = dotProduct(m[i], v, n) # uses provided dot product code
 
 	return sol
 
