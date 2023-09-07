@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 # 3.2 Exercises
 # exercise 1
+# creates two numpy arrays of the same length using two different methods
 x = np.linspace(0, 1, 5)
 y = np.arange(1, 2, 0.2)
 
