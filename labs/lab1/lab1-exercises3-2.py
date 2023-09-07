@@ -23,13 +23,14 @@ plt.ylabel('w')
 plt.show()
 
 # exercise 5
-s = 3*w
+s = 3*w # vector equal to 3 times w
 
+# plot x versus x and w
 plt.plot(x, w) 
 plt.plot(x, s)
 plt.xlabel('x')
 plt.ylabel('w')
-plt.savefig('Downloads/appm4600/labs/lab1/Figure1')
+plt.savefig('Downloads/appm4600/labs/lab1/Figure1') # saves image to file
 
 exit()
 
