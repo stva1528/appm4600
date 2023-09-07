@@ -53,6 +53,7 @@ driver()
 
 # exercise 3
 def driver():
+        # compare my code to numpy commands
 	n = 100
 	x = np.linspace(0,np.pi,n)
 
@@ -60,7 +61,8 @@ def driver():
 	g = lambda x: 6*x**3 + 2*np.sin(x)
 	y = f(x)
 	w = g(x)
-	
+
+	# compares dot product
 	print('Dot product using Numpy : ', np.dot(y, w))
 	print('Dot product using my code : ', dotProduct(y, w, n))
 	
@@ -68,6 +70,7 @@ def driver():
 	m = np.array([[6, 8, 7], [4, 2, 5], [8, 4, 4], [1, 5, 9]])
 	v = np.array((4, 7, 2))
 
+        # compares matrix vector multiplication
 	print('Matrix multiplication using Numpy : ', np.matmul(m, v))
 	print('Matrix multiplication using my code : ', matrixVectorMult(m, v, n))
 
