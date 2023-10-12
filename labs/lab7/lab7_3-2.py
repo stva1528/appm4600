@@ -1,6 +1,7 @@
 import numpy as np
 import numpy.linalg as la
 import matplotlib.pyplot as plt
+import math
 from numpy.linalg import inv 
 
 def driver():
@@ -13,8 +14,10 @@ def driver():
     b = 1
    
     ''' create interpolation nodes '''
-    xint = np.linspace(a,b,N+1)
-    
+    xint = np.zeros(N+1)
+    for j in range(1, N+1):
+        val = ((2*j-1)*math.pi)/(2*N)
+        xint[j] = math.cos(val)
     
     ''' create interpolation data '''
     yint = f(xint)
@@ -58,7 +61,7 @@ def driver():
     plt.plot(xeval,yeval_dd,'c.--',label='Newton DD')
     plt.plot(xeval,yeval_m,'m.--',label='Monomial Expansion')
     plt.legend()
-    plt.savefig('plots-N10.pdf')
+    plt.savefig('plot-newnodes.pdf')
 
     plt.figure() 
     err_l = abs(yeval_l-fex)
@@ -68,7 +71,7 @@ def driver():
     plt.semilogy(xeval,err_dd,'bs--',label='Newton DD')
     plt.semilogy(xeval,err_m,'m.--', label='Monomial Expansion')
     plt.legend()
-    plt.savefig('errorplots-N10.pdf')
+    plt.savefig('errorplot-newnodes.pdf')
 
 ''' lagrange polynomial '''
 def eval_lagrange(xeval,xint,yint,N):
