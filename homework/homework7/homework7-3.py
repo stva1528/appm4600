@@ -7,16 +7,15 @@ def driver():
     # given data
     f = lambda x: 1/(1+(10*x)**2)
 
-    N = 25
+    N = 50
 
     Neval = 1000
 
     xeval = np.linspace(-1,1,Neval+1)
 
     xint = np.zeros(N+1)
-    h = 2/N
-    for i in range(1,N+2):
-        xint[i-1] = -1+h*(i-1)
+    for j in range(N+1):
+        xint[N-j] = np.cos(((2*j)*np.pi)/(2*N))
 
     yint = f(xint)
 
